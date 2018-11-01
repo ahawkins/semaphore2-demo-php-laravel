@@ -16,7 +16,7 @@ blocks:
           commands:
             - cache restore v1-composer-$(checksum composer.lock)
             - composer install
-            - cache store v1-composer-$(checksum compose.lock) vendor
+            - cache store v1-composer-$(checksum composer.lock) vendor
   - name: Test
     task:
       prologue:
