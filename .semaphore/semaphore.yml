@@ -24,6 +24,7 @@ blocks:
           - checkout
           - cache restore v1-composer-$(checksum composer.lock)
           - export PATH="./vendor/bin:${PATH}"
+          - cp .env.testing .env
       jobs:
         - name: Everything
           commands:
